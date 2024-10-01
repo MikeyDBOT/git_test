@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+/*
+//Write a function called add7 that takes one number and returns that number + 7.
+function add7(num1) {
+    const calc = (num1 + 7);
+alert(calc)  
+return;  
+}
+
+//Write a function called multiply that takes 2 numbers and returns their product.
+
+function multiply(num1, num2) {
+    const mult = (num1 * num2);
+    alert(mult);
+    return;
+}
+
+//Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+
+function capitalize(myString) {
+const newString = myString.charAt(0).toUpperCase() + myString.slice(1).toLowerCase();
+alert(newString);
+return;
+}
+
+//Write a function called lastLetter that takes a string and returns the very last letter of that string
+function lastLetter(str) {
+    const newstr = str.slice(-1);
+    alert(newstr)
+}
+
+add7(63);
+multiply(5, 5);
+capitalize('tharYUUI')
+lastLetter("abcd")
+*/
+
+//FizzBuzz Game
+/*When a user inputs a number
+Loop from 1 to the entered number
+If the current number is divisible by 3 then print "Fizz"
+If the current number is divisible by 5 then print "Buzz"
+If the current number is divisible by 3 and 5 then print "FizzBuzz"
+Otherwise print the current number
+
+
+//When a user inputs a number
+let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+//Loop from 1 to the entered number
+for (let i = 1; i <= answer; i++) {
+    if(i % 5 === 0 && i % 3 === 0){
+        console.log('Fizz');
+    } else if (i % 5 === 0) {
+            console.log('Buzz');
+    } else if (i % 3 === 0)  {
+        console.log('FIZZBuzz');
+    }
+    
+    else{
+  console.log(i);
+    }
+}
+    */
+    let answer = (prompt('Enter number'))
+    let cnvtAnswr
+
+    function convertArr () {
+        cnvtAnswr = answer.split(',').map(item => item.trim());   
+        console.log(cnvtAnswr); 
+    }
+    
+convertArr()
+
+    sumEvenNumbers(cnvtAnswr)
+
+    function sumEvenNumbers(X) {
+    let total = 0;
+    for (let num of X) {
+        if (num % 2 === 0) {
+            total += num;
+        }
+    }
+    alert(total);
+}
+
+
+
+</script>
+
+
+</body>
+</html>
