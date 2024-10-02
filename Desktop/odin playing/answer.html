@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <script>
+        function playGame() {
+            for (let i = 0; i < 4; i++) {
+                let humanSelection = getHumanChoice();
+                console.log(`Human chose: ${humanSelection}`); // Get human's choice
+                let computerSelection = getComputerChoice(); // Get computer's choice
+                console.log(`Computer chose: ${computerSelection}`);
+                playRound(humanSelection, computerSelection); // Play the round with these choices
+            }
+        }
+
+        function getHumanChoice() {
+            let x = prompt('Paper, Scissors, Rock?');
+            return x; // Return the user's choice
+        }
+
+        function getComputerChoice() {
+            const randomNumber = Math.random();
+            if (randomNumber < 0.33) {
+                return "rock";
+            } else if (randomNumber < 0.66) {
+                return "paper";
+            } else {
+                return "scissors";
+            }
+        }
+
+
+        function playRound(humanSelection, computerSelection) {
+            if (humanSelection === 'rock' && computerSelection === 'scissors') {
+                alert('You win! Rock beats Scissors');
+            } else if (humanSelection === 'scissors' && computerSelection === 'paper') {
+                alert('You win! Scissors beats Paper');
+            } else if (humanSelection === 'paper' && computerSelection === 'rock') {
+                alert('You win! Paper beats Rock');
+            } else if (humanSelection === computerSelection) {
+                alert('It\'s a tie!');
+            } else {
+                alert('You lose!');
+            }
+        }
+
+        playGame(); // Start the game
+    </script>
+</head>
+<body>
+
+  <!-- https://www.theodinproject.com/lessons/foundations-rock-paper-scissors -->
+
+</body>
+</html>
+
